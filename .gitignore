@@ -1,0 +1,8 @@
+# Files
+.DS_Store
+npm-debug.log
+TODOS.md
+
+# Folders
+.idea/
+node_modules
