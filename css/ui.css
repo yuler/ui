@@ -1,0 +1,17 @@
+:root {
+  --primary: #f00;
+}
+body {
+  display: flex;
+  color: #f00;
+  color: --primary;
+}
+body::before,
+body::after {
+  content: '';
+  display: table;
+}
+body::after {
+  clear: both;
+}
+/*# sourceMappingURL=ui.css.map */

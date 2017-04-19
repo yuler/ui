@@ -1,0 +1,21 @@
+// clear float
+clearfix()
+  &::before
+  &::after
+    content ''
+    display table
+  &::after
+    clear both
+
+// text ellipsis
+ellipsis()
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+
+// mixin css variables
+var(val)
+  add-property(current-property,replace('--', '$', val))
+  s(val)
+
+//

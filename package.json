@@ -4,12 +4,12 @@
   "description": "css ",
   "main": "index.styl",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf css/*",
+    "stylus": "stylus ui.styl -m -o css/ui.css",
+    "postcss": "postcss --use autoprefixer --output css/ui.css css/ui.css",
+    "build": "npm run clean && npm run stylus && npm run postcss"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yuler/ui.git"
-  },
+  "repository": "git+https://github.com/yuler/ui.git",
   "keywords": [
     "css",
     "ui"
@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/yuler/ui/issues"
   },
-  "homepage": "https://github.com/yuler/ui#readme"
+  "homepage": "https://github.com/yuler/ui#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "postcss-cli": "^3.1.1",
+    "rimraf": "^2.6.1",
+    "stylus": "^0.54.5"
+  }
 }
